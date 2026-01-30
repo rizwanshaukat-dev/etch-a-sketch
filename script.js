@@ -16,3 +16,12 @@ function customizeGrid() {
     }); 
 }
 }
+function rainbowColorFiller(){
+    document.querySelectorAll(".cell").forEach(cell=>{
+    cell.addEventListener("mousemove",function(){
+    this.style.backgroundColor=randomColorGenerator();});  
+    }); 
+}
+function randomColorGenerator(){
+    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+}
